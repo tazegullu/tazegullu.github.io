@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link href="main.css" rel="stylesheet">
+</head>
+
+<body id="body_background">
+  <div class="container">
+    <div class="contentRow" id="div_QuestionButton">
+        <div class="selectSubjectButton">
+            <button id="button_questionBySubjects" type="button" class="btn btn-primary"
+                onclick="onclick_QuestionBySubjects()">Seçili Konulardan Sor</button>
+        </div>
+        <div class="buttons">
+            <button id="button_question" type="button" class="btn btn-primary"
+                onclick="onclick_RandomQuestion()">Rastgele Soru Sor</button>
+        </div>
+    </div>
+    <div class="contentRow" id="div_SubjectSelect" style="display: none;">
+        <div>
+            <div>
+                <label for="select_Subjects">Konu seçin (CTRL: Çoklu Seçim)</label>
+            </div>
+            <div>
+                <select name="subjects" id="select_Subjects" multiple></select>
+            </div>
+            <div class="buttons">
+                <button id="button_ApplySelectedSubjects" type="button" class="btn btn-primary" 
+                        onclick="onclick_ApplySelectedSubjects()">Uygula</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="contentRow" id="div_Subject" style="display: none;">
+        <h5><span id="span_Subject" style="font-weight: bold;">Konu</span></h5>
+    </div>
+    <div class="contentRow" id="div_Question" style="display: none;">Soru</div>
+    <div class="contentRow" id="div_AnswerButton" style="display: none;">
+        <div class="buttons">
+            <button id="button_answer" type="button" class="btn btn-primary"
+                    onclick="onclick_ShowAnswer()">Cevabı Göster</button>
+        </div>
+        
+    </div>
+    <div class="contentRow" id="div_Answer" style="display: none;">Cevap</div>
+    <div class="contentRow" id="div_YesNoReturnButtons" style="display: none;">
+        <div class="buttons">
+            <button id="button_yes" type="button" class="btn btn-success"
+                    onclick="onclick_Yes()">Bildim</button>
+        </div>
+        <div class="buttons">
+            <button id="button_no" type="button" class="btn btn-danger"
+                    onclick="onclick_No()">Bilemedim</button>
+        </div>
+        <div class="buttons">
+            <button id="button_return" type="button" class="btn btn-primary"
+                    onclick="onclick_Return()">Başa Dön</button>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
