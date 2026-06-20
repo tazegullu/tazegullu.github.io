@@ -1,30 +1,341 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="main.css" rel="stylesheet">
-
-    <title>Personal Web Site - AArif Tazegüllü</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Arif Tazegüllü — Backend Developer and Mobile App Builder. Portfolio, mobile apps, projects, and contact links." />
+  <meta name="theme-color" content="#080B17" />
+  <title>Arif Tazegüllü — Backend Developer & Mobile App Builder</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body id="backgroundBody">
-    <div id="textBody">
-        <h6>Version 1.02</h6>
-        <h1 style="font-size:300%;">Arif Tazegüllü</h1>
-        <p style="font-size:160%;">Computer Engineer / Software Developer</p>
-        <div>
-            <a href="https://www.linkedin.com/in/arif-tazeg%C3%BCll%C3%BC-5b80777a/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
-            <a href="https://github.com/tazegullu" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
-            <a href="https://twitter.com/tazegullu" class="fa fa-twitter" target="_blank" rel="noopener noreferrer"></a>
-            <a href="https://www.instagram.com/tazegullu/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+<body>
+  <div class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Go to homepage">
+        <span class="brand-mark">AT</span>
+        <span class="brand-copy">
+          <strong>Arif Tazegüllü</strong>
+          <small>Software Developer</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-site-nav>
+        <a href="#apps">Apps</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-padding">
+        <div class="hero-content reveal">
+          <p class="eyebrow"><span></span> Backend systems · Mobile apps · Product experiments</p>
+          <h1>Building reliable backend systems and practical mobile apps.</h1>
+          <p class="hero-lead">
+            I am a C# .NET backend developer working on large-scale banking systems, now building focused mobile apps with React Native, Expo, Firebase and product-first thinking.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#apps">View Mobile Apps</a>
+            <a class="btn btn-secondary" href="mailto:ariftazegullu.developer@gmail.com">Contact Me</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Profile highlights">
+            <div>
+              <strong>Backend</strong>
+              <span>C# .NET · SQL</span>
+            </div>
+            <div>
+              <strong>Mobile</strong>
+              <span>React Native · Expo</span>
+            </div>
+            <div>
+              <strong>Publishing</strong>
+              <span>iOS · Android · Web</span>
+            </div>
+          </div>
         </div>
-        <div id="div_apps">
-            <a href="questions_app/questions.html" class="btn btn-info" role="button" target="blank">Questions App</a>
-            <a href="elif_app/elif.html" class="btn btn-info" role="button" target="blank">Elif App</a>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="phone-orbit orbit-one"></div>
+          <div class="phone-orbit orbit-two"></div>
+          <div class="phone-mockup main-phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-topbar">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="app-hero-card">
+                <small>App Portfolio</small>
+                <strong>Apps by Arif</strong>
+                <p>Small, focused tools for real user problems.</p>
+              </div>
+              <div class="mini-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="app-list-card">
+                <span></span>
+                <div>
+                  <strong></strong>
+                  <small></small>
+                </div>
+              </div>
+              <div class="app-list-card muted">
+                <span></span>
+                <div>
+                  <strong></strong>
+                  <small></small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
+
+      <section class="section-padding logo-strip reveal" aria-label="Core focus areas">
+        <span>Backend Engineering</span>
+        <span>Mobile Apps</span>
+        <span>Firebase</span>
+        <span>React Native</span>
+        <span>App Store Ready</span>
+      </section>
+
+      <section class="section-padding" id="apps">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Mobile app showcase</p>
+          <h2>Focused mobile apps with room for store links.</h2>
+          <p>
+            Each app card is prepared for App Store, Google Play, GitHub, demo and privacy policy links. Replace the placeholder links as each product goes live.
+          </p>
+        </div>
+
+        <div class="apps-grid">
+          <article class="app-card featured reveal">
+            <div class="app-card-top">
+              <div class="app-icon travel">TR</div>
+              <div>
+                <span class="status live">Store Prep</span>
+                <h3>TripReady</h3>
+              </div>
+            </div>
+            <p>
+              A lightweight travel packing and checklist app designed for practical trip preparation, offline-first usage and simple daily utility.
+            </p>
+            <div class="app-meta">
+              <span>React Native</span>
+              <span>Expo</span>
+              <span>iOS</span>
+            </div>
+            <div class="app-links">
+              <a class="link-pill disabled" href="#" aria-disabled="true">App Store Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true">Google Play Soon</a>
+              <a class="link-pill" href="https://tazegullu.github.io/tripready/" target="_blank" rel="noreferrer">Privacy</a>
+            </div>
+          </article>
+
+          <article class="app-card reveal">
+            <div class="app-card-top">
+              <div class="app-icon exam">YK</div>
+              <div>
+                <span class="status review">In Review</span>
+                <h3>YKS Puan</h3>
+              </div>
+            </div>
+            <p>
+              A clean TYT/AYT score calculator focused on fast input, estimated score ranges and a simple publishing-first mobile experience.
+            </p>
+            <div class="app-meta">
+              <span>Expo</span>
+              <span>TypeScript</span>
+              <span>Education</span>
+            </div>
+            <div class="app-links">
+              <a class="link-pill disabled" href="#" aria-disabled="true">App Store Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true">Google Play Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true">GitHub Soon</a>
+            </div>
+          </article>
+
+          <article class="app-card reveal">
+            <div class="app-card-top">
+              <div class="app-icon finance">FT</div>
+              <div>
+                <span class="status building">Private Build</span>
+                <h3>Finance Tracker</h3>
+              </div>
+            </div>
+            <p>
+              A personal expense tracking app with installments, fixed expenses, credit card cycles, monthly views and multi-device sync experiments.
+            </p>
+            <div class="app-meta">
+              <span>Firebase</span>
+              <span>Zustand</span>
+              <span>SQLite</span>
+            </div>
+            <div class="app-links">
+              <a class="link-pill disabled" href="#" aria-disabled="true">Case Study Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true">GitHub Private</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-padding split-section" id="projects">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow"><span></span> Selected projects</p>
+          <h2>Web projects, experiments and legacy tools.</h2>
+          <p>
+            This area keeps older GitHub Pages projects visible while the main site shifts toward a modern app portfolio.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <a class="project-row reveal" href="https://tazegullu.github.io/questions_app/questions.html" target="_blank" rel="noreferrer">
+            <div>
+              <span>Legacy Web App</span>
+              <strong>Questions App</strong>
+              <p>A small browser-based question practice tool from the earlier version of this website.</p>
+            </div>
+            <em>Open</em>
+          </a>
+
+          <a class="project-row reveal" href="https://tazegullu.github.io/elif_app/elif.html" target="_blank" rel="noreferrer">
+            <div>
+              <span>Legacy Web App</span>
+              <strong>Elif App</strong>
+              <p>An older utility project preserved as part of the personal GitHub Pages archive.</p>
+            </div>
+            <em>Open</em>
+          </a>
+
+          <a class="project-row reveal" href="https://github.com/tazegullu" target="_blank" rel="noreferrer">
+            <div>
+              <span>Repository</span>
+              <strong>GitHub Profile</strong>
+              <p>Source code, experiments and future public repositories can be linked here.</p>
+            </div>
+            <em>Visit</em>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-padding" id="stack">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Technical stack</p>
+          <h2>Backend depth, mobile product direction.</h2>
+          <p>
+            The site presents a balanced profile: enterprise backend engineering experience with a growing portfolio of practical mobile applications.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <article class="stack-card reveal">
+            <span class="stack-number">01</span>
+            <h3>Backend Engineering</h3>
+            <p>C# .NET, SQL, API design, enterprise systems and production-oriented software development.</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">02</span>
+            <h3>Mobile Development</h3>
+            <p>React Native, Expo, TypeScript, responsive UI, local-first flows and store-ready app structures.</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">03</span>
+            <h3>Cloud & Sync</h3>
+            <p>Firebase, Firestore, authentication-ready architecture, data synchronization and scalable app foundations.</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">04</span>
+            <h3>Product Thinking</h3>
+            <p>Small focused products, practical use cases, launch discipline and iterative improvement after release.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-padding about-section" id="about">
+        <div class="about-card reveal">
+          <div>
+            <p class="eyebrow"><span></span> About</p>
+            <h2>Developer profile</h2>
+          </div>
+          <p>
+            I work as a backend developer in large-scale banking software, with a strong foundation in C# .NET and SQL. Alongside backend engineering, I build mobile applications with React Native and Expo, focusing on simple, useful products that can be shipped, tested and improved in real life.
+          </p>
+          <p>
+            This website is designed as a central portfolio for my mobile apps, technical projects and future public releases.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <span></span>
+            <div>
+              <strong>Enterprise backend</strong>
+              <p>Large-scale C# .NET and SQL development for banking systems.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span></span>
+            <div>
+              <strong>Cross-platform mobile apps</strong>
+              <p>React Native and Expo apps for iOS, Android and web workflows.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span></span>
+            <div>
+              <strong>Independent product portfolio</strong>
+              <p>Focused mobile products, store publishing and practical app experiments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding contact-section" id="contact">
+        <div class="contact-card reveal">
+          <p class="eyebrow"><span></span> Contact</p>
+          <h2>Let’s connect.</h2>
+          <p>
+            For professional contact, app feedback, collaboration or technical discussions, use the links below.
+          </p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:ariftazegullu.developer@gmail.com">Send Email</a>
+            <a class="btn btn-secondary" href="https://github.com/tazegullu" target="_blank" rel="noreferrer">GitHub</a>
+            <button class="btn btn-ghost" type="button" data-copy-email>Copy Email</button>
+          </div>
+
+          <p class="copy-status" data-copy-status aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> Arif Tazegüllü. Built for GitHub Pages.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
