@@ -9,7 +9,7 @@ Static single-page portfolio website for GitHub Pages.
 - Added a LinkedIn-informed professional profile section
 - Added profile cards for current role, company, education and location
 - Kept mobile app portfolio structure and app link placeholders
-- Kept legacy GitHub Pages projects visible
+- Kept Questions App visible as the remaining legacy GitHub Pages project
 
 ## Files
 
