@@ -19,56 +19,63 @@
     <div class="ambient ambient-three"></div>
 
     <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Go to homepage">
+      <a class="brand" href="#top" aria-label="Go to homepage" data-i18n-attr="aria-label:brandAria">
         <span class="brand-mark">AT</span>
         <span class="brand-copy">
           <strong>Arif Tazegüllü</strong>
-          <small>C# .NET · Mobile Apps</small>
+          <small data-i18n="brandSubtitle">C# .NET · Mobile Apps</small>
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <nav class="site-nav" data-site-nav aria-label="Main navigation" data-i18n-attr="aria-label:navAria">
+          <a href="#apps" data-i18n="navApps">Apps</a>
+          <a href="#profile" data-i18n="navProfile">Profile</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#stack" data-i18n="navStack">Stack</a>
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
 
-      <nav class="site-nav" data-site-nav>
-        <a href="#apps">Apps</a>
-        <a href="#profile">Profile</a>
-        <a href="#projects">Projects</a>
-        <a href="#stack">Stack</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <div class="language-switch" aria-label="Language selection" data-i18n-attr="aria-label:languageAria">
+          <button class="language-option active" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="language-option" type="button" data-lang="tr" aria-pressed="false">TR</button>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle data-i18n-attr="aria-label:navToggleAria">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
       <section class="hero section-padding">
         <div class="hero-content reveal">
-          <p class="eyebrow"><span></span> Software Developer · C# .NET · Mobile Apps</p>
-          <h1>Software developer building backend systems and mobile apps.</h1>
-          <p class="hero-lead">
+          <p class="eyebrow"><span></span> <span data-i18n="heroEyebrow">Software Developer · C# .NET · Mobile Apps</span></p>
+          <h1 data-i18n="heroTitle">Software developer building backend systems and mobile apps.</h1>
+          <p class="hero-lead" data-i18n="heroLead">
             I am a Software Developer focused on C# .NET backend engineering, enterprise systems and practical mobile apps. My portfolio brings together professional experience, independent app work and GitHub Pages projects.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#apps">View Mobile Apps</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-            <a class="btn btn-ghost" href="mailto:ariftazegullu.developer@gmail.com">Contact Me</a>
+            <a class="btn btn-primary" href="#apps" data-i18n="heroAppsButton">View Mobile Apps</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer" data-i18n="heroLinkedinButton">LinkedIn Profile</a>
+            <a class="btn btn-ghost" href="mailto:ariftazegullu.developer@gmail.com" data-i18n="heroContactButton">Contact Me</a>
           </div>
 
-          <div class="hero-stats" aria-label="Profile highlights">
+          <div class="hero-stats" aria-label="Profile highlights" data-i18n-attr="aria-label:heroStatsAria">
             <div>
-              <strong>Role</strong>
-              <span>Software Developer</span>
+              <strong data-i18n="heroStatRoleLabel">Role</strong>
+              <span data-i18n="heroStatRoleValue">Software Developer</span>
             </div>
             <div>
-              <strong>Core Stack</strong>
+              <strong data-i18n="heroStatStackLabel">Core Stack</strong>
               <span>C# .NET · SQL</span>
             </div>
             <div>
-              <strong>Mobile Apps</strong>
+              <strong data-i18n="heroStatMobileLabel">Mobile Apps</strong>
               <span>React Native · Expo</span>
             </div>
           </div>
@@ -85,9 +92,9 @@
                 <span></span>
               </div>
               <div class="app-hero-card">
-                <small>App Portfolio</small>
-                <strong>Apps by Arif</strong>
-                <p>Small, focused tools for real user problems.</p>
+                <small data-i18n="mockupSmall">App Portfolio</small>
+                <strong data-i18n="mockupTitle">Apps by Arif</strong>
+                <p data-i18n="mockupText">Small, focused tools for real user problems.</p>
               </div>
               <div class="mini-grid">
                 <div></div>
@@ -114,8 +121,8 @@
         </div>
       </section>
 
-      <section class="section-padding logo-strip reveal" aria-label="Core focus areas">
-        <span>Software Developer</span>
+      <section class="section-padding logo-strip reveal" aria-label="Core focus areas" data-i18n-attr="aria-label:focusAria">
+        <span data-i18n="focusSoftwareDeveloper">Software Developer</span>
         <span>C# .NET</span>
         <span>SQL</span>
         <span>React Native</span>
@@ -125,45 +132,45 @@
 
       <section class="section-padding profile-section" id="profile">
         <div class="section-heading compact reveal">
-          <p class="eyebrow"><span></span> LinkedIn profile</p>
-          <h2>Professional profile, updated from LinkedIn.</h2>
-          <p>
+          <p class="eyebrow"><span></span> <span data-i18n="profileEyebrow">LinkedIn profile</span></p>
+          <h2 data-i18n="profileTitle">Professional profile, updated from LinkedIn.</h2>
+          <p data-i18n="profileIntro">
             A concise profile area for professional credibility: role, current company, education, location and public profile link.
           </p>
         </div>
 
         <div class="profile-grid">
           <article class="profile-card reveal">
-            <span class="profile-label">Current role</span>
-            <h3>Software Developer</h3>
-            <p>C# .NET focused developer with enterprise backend experience and a growing mobile app portfolio.</p>
+            <span class="profile-label" data-i18n="profileRoleLabel">Current role</span>
+            <h3 data-i18n="profileRoleTitle">Software Developer</h3>
+            <p data-i18n="profileRoleText">C# .NET focused developer with enterprise backend experience and a growing mobile app portfolio.</p>
           </article>
 
           <article class="profile-card reveal">
-            <span class="profile-label">Company</span>
+            <span class="profile-label" data-i18n="profileCompanyLabel">Company</span>
             <h3>BilgeAdam Teknoloji</h3>
-            <p>Professional software development experience in enterprise-scale systems.</p>
+            <p data-i18n="profileCompanyText">Professional software development experience in enterprise-scale systems.</p>
           </article>
 
           <article class="profile-card reveal">
-            <span class="profile-label">Education</span>
+            <span class="profile-label" data-i18n="profileEducationLabel">Education</span>
             <h3>İstanbul Teknik Üniversitesi</h3>
-            <p>Engineering background supporting backend, data and product-oriented software work.</p>
+            <p data-i18n="profileEducationText">Engineering background supporting backend, data and product-oriented software work.</p>
           </article>
 
           <article class="profile-card reveal">
-            <span class="profile-label">Location</span>
+            <span class="profile-label" data-i18n="profileLocationLabel">Location</span>
             <h3>İstanbul, Türkiye</h3>
-            <p>Building professional backend systems and independent mobile products from Istanbul.</p>
+            <p data-i18n="profileLocationText">Building professional backend systems and independent mobile products from Istanbul.</p>
           </article>
         </div>
       </section>
 
       <section class="section-padding" id="apps">
         <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> Mobile app showcase</p>
-          <h2>Focused mobile apps with room for store and product links.</h2>
-          <p>
+          <p class="eyebrow"><span></span> <span data-i18n="appsEyebrow">Mobile app showcase</span></p>
+          <h2 data-i18n="appsTitle">Focused mobile apps with room for store and product links.</h2>
+          <p data-i18n="appsIntro">
             Each app card is prepared for App Store, Google Play, GitHub, demo and privacy policy links, so the site can grow with every product release.
           </p>
         </div>
@@ -173,11 +180,11 @@
             <div class="app-card-top">
               <div class="app-icon travel">TR</div>
               <div>
-                <span class="status live">Store Prep</span>
+                <span class="status live" data-i18n="statusStorePrep">Store Prep</span>
                 <h3>TripReady</h3>
               </div>
             </div>
-            <p>
+            <p data-i18n="tripReadyText">
               A lightweight travel packing and checklist app designed for practical trip preparation, offline-first usage and simple daily utility.
             </p>
             <div class="app-meta">
@@ -186,9 +193,9 @@
               <span>iOS</span>
             </div>
             <div class="app-links">
-              <a class="link-pill disabled" href="#" aria-disabled="true">App Store Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true">Google Play Soon</a>
-              <a class="link-pill" href="https://tazegullu.github.io/tripready/" target="_blank" rel="noreferrer">Privacy</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="appStoreSoon">App Store Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="googlePlaySoon">Google Play Soon</a>
+              <a class="link-pill" href="https://tazegullu.github.io/tripready/" target="_blank" rel="noreferrer" data-i18n="privacy">Privacy</a>
             </div>
           </article>
 
@@ -196,22 +203,22 @@
             <div class="app-card-top">
               <div class="app-icon exam">YK</div>
               <div>
-                <span class="status review">In Review</span>
+                <span class="status review" data-i18n="statusInReview">In Review</span>
                 <h3>YKS Puan</h3>
               </div>
             </div>
-            <p>
+            <p data-i18n="yksText">
               A clean TYT/AYT score calculator focused on fast input, estimated score ranges and a simple publishing-first mobile experience.
             </p>
             <div class="app-meta">
               <span>Expo</span>
               <span>TypeScript</span>
-              <span>Education</span>
+              <span data-i18n="educationTag">Education</span>
             </div>
             <div class="app-links">
-              <a class="link-pill disabled" href="#" aria-disabled="true">App Store Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true">Google Play Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true">GitHub Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="appStoreSoon">App Store Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="googlePlaySoon">Google Play Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="githubSoon">GitHub Soon</a>
             </div>
           </article>
 
@@ -219,11 +226,11 @@
             <div class="app-card-top">
               <div class="app-icon finance">FT</div>
               <div>
-                <span class="status building">Private Build</span>
+                <span class="status building" data-i18n="statusPrivateBuild">Private Build</span>
                 <h3>Finance Tracker</h3>
               </div>
             </div>
-            <p>
+            <p data-i18n="financeText">
               A personal expense tracking app with installments, fixed expenses, credit card cycles, monthly views and multi-device sync experiments.
             </p>
             <div class="app-meta">
@@ -232,8 +239,8 @@
               <span>SQLite</span>
             </div>
             <div class="app-links">
-              <a class="link-pill disabled" href="#" aria-disabled="true">Case Study Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true">GitHub Private</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="caseStudySoon">Case Study Soon</a>
+              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="githubPrivate">GitHub Private</a>
             </div>
           </article>
         </div>
@@ -241,9 +248,9 @@
 
       <section class="section-padding split-section" id="projects">
         <div class="section-heading compact reveal">
-          <p class="eyebrow"><span></span> Selected projects</p>
-          <h2>Web projects, experiments and public repositories.</h2>
-          <p>
+          <p class="eyebrow"><span></span> <span data-i18n="projectsEyebrow">Selected projects</span></p>
+          <h2 data-i18n="projectsTitle">Web projects, experiments and public repositories.</h2>
+          <p data-i18n="projectsIntro">
             This area keeps selected public projects visible while the main site shifts toward a modern app portfolio.
           </p>
         </div>
@@ -251,30 +258,29 @@
         <div class="project-list">
           <a class="project-row reveal" href="https://tazegullu.github.io/questions_app/questions.html" target="_blank" rel="noreferrer">
             <div>
-              <span>Legacy Web App</span>
+              <span data-i18n="legacyWebApp">Legacy Web App</span>
               <strong>Questions App</strong>
-              <p>A small browser-based question practice tool from the earlier version of this website.</p>
+              <p data-i18n="questionsText">A small browser-based question practice tool from the earlier version of this website.</p>
             </div>
-            <em>Open</em>
+            <em data-i18n="open">Open</em>
           </a>
-
 
           <a class="project-row reveal" href="https://github.com/tazegullu" target="_blank" rel="noreferrer">
             <div>
-              <span>Repository</span>
+              <span data-i18n="repository">Repository</span>
               <strong>GitHub Profile</strong>
-              <p>Source code, experiments and future public repositories can be linked here.</p>
+              <p data-i18n="githubProfileText">Source code, experiments and future public repositories can be linked here.</p>
             </div>
-            <em>Visit</em>
+            <em data-i18n="visit">Visit</em>
           </a>
         </div>
       </section>
 
       <section class="section-padding" id="stack">
         <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> Technical stack</p>
-          <h2>C# .NET depth, mobile product direction.</h2>
-          <p>
+          <p class="eyebrow"><span></span> <span data-i18n="stackEyebrow">Technical stack</span></p>
+          <h2 data-i18n="stackTitle">C# .NET depth, mobile product direction.</h2>
+          <p data-i18n="stackIntro">
             The site presents a balanced profile: C# .NET backend experience, SQL-oriented engineering, and a growing portfolio of practical mobile applications.
           </p>
         </div>
@@ -282,23 +288,23 @@
         <div class="stack-grid">
           <article class="stack-card reveal">
             <span class="stack-number">01</span>
-            <h3>Backend Engineering</h3>
-            <p>C# .NET, SQL, API design, enterprise systems and production-oriented software development.</p>
+            <h3 data-i18n="backendTitle">Backend Engineering</h3>
+            <p data-i18n="backendText">C# .NET, SQL, API design, enterprise systems and production-oriented software development.</p>
           </article>
           <article class="stack-card reveal">
             <span class="stack-number">02</span>
-            <h3>Mobile Development</h3>
-            <p>React Native, Expo, TypeScript, responsive UI, local-first flows and store-ready app structures.</p>
+            <h3 data-i18n="mobileTitle">Mobile Development</h3>
+            <p data-i18n="mobileText">React Native, Expo, TypeScript, responsive UI, local-first flows and store-ready app structures.</p>
           </article>
           <article class="stack-card reveal">
             <span class="stack-number">03</span>
-            <h3>Data, Cloud & Sync</h3>
-            <p>Firebase, Firestore, SQLite, data synchronization patterns and scalable app foundations.</p>
+            <h3 data-i18n="dataTitle">Data, Cloud & Sync</h3>
+            <p data-i18n="dataText">Firebase, Firestore, SQLite, data synchronization patterns and scalable app foundations.</p>
           </article>
           <article class="stack-card reveal">
             <span class="stack-number">04</span>
-            <h3>Product Thinking</h3>
-            <p>Small focused products, practical use cases, launch discipline and iterative improvement after release.</p>
+            <h3 data-i18n="productTitle">Product Thinking</h3>
+            <p data-i18n="productText">Small focused products, practical use cases, launch discipline and iterative improvement after release.</p>
           </article>
         </div>
       </section>
@@ -306,13 +312,13 @@
       <section class="section-padding about-section" id="about">
         <div class="about-card reveal">
           <div>
-            <p class="eyebrow"><span></span> About</p>
-            <h2>Developer profile</h2>
+            <p class="eyebrow"><span></span> <span data-i18n="aboutEyebrow">About</span></p>
+            <h2 data-i18n="aboutTitle">Developer profile</h2>
           </div>
-          <p>
+          <p data-i18n="aboutTextOne">
             I am a Software Developer with a strong foundation in C# .NET and SQL. My professional background is rooted in enterprise backend engineering, while my independent work focuses on React Native and Expo mobile apps that solve practical everyday problems.
           </p>
-          <p>
+          <p data-i18n="aboutTextTwo">
             This website is designed as a central portfolio for my LinkedIn profile, mobile apps, technical projects, privacy policy pages and future public releases.
           </p>
         </div>
@@ -321,22 +327,22 @@
           <div class="timeline-item">
             <span></span>
             <div>
-              <strong>Software Developer</strong>
-              <p>C# .NET and SQL development for enterprise-scale systems.</p>
+              <strong data-i18n="timelineSoftwareTitle">Software Developer</strong>
+              <p data-i18n="timelineSoftwareText">C# .NET and SQL development for enterprise-scale systems.</p>
             </div>
           </div>
           <div class="timeline-item">
             <span></span>
             <div>
-              <strong>Cross-platform mobile apps</strong>
-              <p>React Native and Expo apps prepared for iOS, Android, web and store publishing workflows.</p>
+              <strong data-i18n="timelineMobileTitle">Cross-platform mobile apps</strong>
+              <p data-i18n="timelineMobileText">React Native and Expo apps prepared for iOS, Android, web and store publishing workflows.</p>
             </div>
           </div>
           <div class="timeline-item">
             <span></span>
             <div>
-              <strong>Independent product portfolio</strong>
-              <p>Focused mobile products, store publishing and practical app experiments.</p>
+              <strong data-i18n="timelineProductTitle">Independent product portfolio</strong>
+              <p data-i18n="timelineProductText">Focused mobile products, store publishing and practical app experiments.</p>
             </div>
           </div>
         </div>
@@ -344,17 +350,17 @@
 
       <section class="section-padding contact-section" id="contact">
         <div class="contact-card reveal">
-          <p class="eyebrow"><span></span> Contact</p>
-          <h2>Let’s connect.</h2>
-          <p>
+          <p class="eyebrow"><span></span> <span data-i18n="contactEyebrow">Contact</span></p>
+          <h2 data-i18n="contactTitle">Let’s connect.</h2>
+          <p data-i18n="contactIntro">
             For professional contact, app feedback, collaboration or technical discussions, use the links below.
           </p>
 
           <div class="contact-actions">
             <a class="btn btn-primary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="btn btn-secondary" href="https://github.com/tazegullu" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn btn-secondary" href="mailto:ariftazegullu.developer@gmail.com">Send Email</a>
-            <button class="btn btn-ghost" type="button" data-copy-email>Copy Email</button>
+            <a class="btn btn-secondary" href="mailto:ariftazegullu.developer@gmail.com" data-i18n="sendEmail">Send Email</a>
+            <button class="btn btn-ghost" type="button" data-copy-email data-i18n="copyEmail">Copy Email</button>
           </div>
 
           <p class="copy-status" data-copy-status aria-live="polite"></p>
@@ -363,8 +369,8 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> Arif Tazegüllü. Built for GitHub Pages.</p>
-      <a href="#top">Back to top</a>
+      <p><span data-i18n="copyrightPrefix">©</span> <span data-year></span> Arif Tazegüllü. <span data-i18n="footerBuilt">Built for GitHub Pages.</span></p>
+      <a href="#top" data-i18n="backToTop">Back to top</a>
     </footer>
   </div>
 
