@@ -31,3 +31,8 @@ Search for `App Store Soon`, `Google Play Soon`, `GitHub Soon`, and `Case Study 
 ## Update translations
 
 All English and Turkish text values are stored in `script.js` inside the `translations` object. Add new keys to both `en` and `tr` when adding new visible text to the page.
+
+
+## Layout update
+
+- Fixed top navigation: the name, language selector and navigation stay visible while scrolling.
