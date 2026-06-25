@@ -3,377 +3,811 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Arif Tazegüllü — Software Developer focused on C# .NET backend systems and practical mobile apps. Portfolio, mobile apps, projects, LinkedIn and contact links." />
-  <meta name="theme-color" content="#080B17" />
-  <title>Arif Tazegüllü — Software Developer | C# .NET & Mobile Apps</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Arif Tazegüllü | C# .NET Backend Developer</title>
+  <meta
+    name="description"
+    content="Personal website of Arif Tazegüllü. C# .NET backend development, enterprise software experience and hobby mobile projects."
+  />
+  <meta name="author" content="Arif Tazegüllü" />
+  <meta property="og:title" content="Arif Tazegüllü | C# .NET Backend Developer" />
+  <meta
+    property="og:description"
+    content="C# .NET backend development, enterprise software experience and hobby mobile projects."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tazegullu.com" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #111827;
+      --muted: #5f6b7a;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --radius: 16px;
+      --max-width: 940px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand strong {
+      font-size: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+
+    .language-switch button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .language-switch button.active {
+      background: var(--text);
+      color: #ffffff;
+    }
+
+    main {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 58px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: center;
+      padding: 88px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface);
+      font-size: 14px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 820px;
+      margin-bottom: 22px;
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: 1;
+      letter-spacing: -0.065em;
+    }
+
+    .hero-text {
+      max-width: 700px;
+      margin-bottom: 34px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 21px);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      background: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover {
+      border-color: #cbd5e1;
+      background: var(--surface);
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      border-color: var(--text);
+      background: var(--text);
+      color: #ffffff;
+    }
+
+    .button.primary:hover {
+      background: #1f2937;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 0;
+      font-size: clamp(27px, 3.8vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      padding: 22px;
+    }
+
+    .card.soft {
+      background: var(--surface);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta-list li {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .meta-list span {
+      color: var(--muted);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .experience-list,
+    .project-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .experience-item,
+    .project-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: #ffffff;
+    }
+
+    .experience-item h3,
+    .project-card h3 {
+      margin-bottom: 6px;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .experience-item p,
+    .project-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .experience-meta {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-top: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .text-link {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      background: var(--surface);
+      padding: 28px;
+    }
+
+    .contact-box p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .site-footer {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: auto;
+        padding: 14px 0;
+        align-items: flex-start;
+      }
+
+      .nav-actions {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 10px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 72px 0 56px;
+      }
+
+      section {
+        padding: 46px 0;
+      }
+
+      .section-head,
+      .card-grid,
+      .experience-item,
+      .project-card,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .project-links {
+        justify-content: flex-start;
+      }
+
+      .meta-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .experience-meta {
+        white-space: normal;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="site-shell">
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-    <div class="ambient ambient-three"></div>
-
-    <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Go to homepage" data-i18n-attr="aria-label:brandAria">
-        <span class="brand-mark">AT</span>
-        <span class="brand-copy">
-          <strong>Arif Tazegüllü</strong>
-          <small data-i18n="brandSubtitle">C# .NET · Mobile Apps</small>
-        </span>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Arif Tazegüllü home">
+        <strong>Arif Tazegüllü</strong>
+        <span data-i18n="brandRole">C# .NET Backend Developer</span>
       </a>
 
-      <div class="header-actions">
-        <nav class="site-nav" data-site-nav aria-label="Main navigation" data-i18n-attr="aria-label:navAria">
-          <a href="#apps" data-i18n="navApps">Apps</a>
-          <a href="#profile" data-i18n="navProfile">Profile</a>
-          <a href="#projects" data-i18n="navProjects">Projects</a>
-          <a href="#stack" data-i18n="navStack">Stack</a>
-          <a href="#about" data-i18n="navAbout">About</a>
+      <div class="nav-actions">
+        <div class="nav-links" aria-label="Page sections">
           <a href="#contact" data-i18n="navContact">Contact</a>
-        </nav>
-
-        <div class="language-switch" aria-label="Language selection" data-i18n-attr="aria-label:languageAria">
-          <button class="language-option active" type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button class="language-option" type="button" data-lang="tr" aria-pressed="false">TR</button>
         </div>
 
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle data-i18n-attr="aria-label:navToggleAria">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="language-switch" aria-label="Language selector">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="tr">TR</button>
+        </div>
       </div>
-    </header>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero section-padding">
-        <div class="hero-content reveal">
-          <p class="eyebrow"><span></span> <span data-i18n="heroEyebrow">Software Developer · C# .NET · Mobile Apps</span></p>
-          <h1 data-i18n="heroTitle">Software developer building backend systems and mobile apps.</h1>
-          <p class="hero-lead" data-i18n="heroLead">
-            I am a Software Developer focused on C# .NET backend engineering, enterprise systems and practical mobile apps. My portfolio brings together professional experience, independent app work and GitHub Pages projects.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#apps" data-i18n="heroAppsButton">View Mobile Apps</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer" data-i18n="heroLinkedinButton">LinkedIn Profile</a>
-            <a class="btn btn-ghost" href="mailto:ariftazegullu.developer@gmail.com" data-i18n="heroContactButton">Contact Me</a>
-          </div>
-
-          <div class="hero-stats" aria-label="Profile highlights" data-i18n-attr="aria-label:heroStatsAria">
-            <div>
-              <strong data-i18n="heroStatRoleLabel">Role</strong>
-              <span data-i18n="heroStatRoleValue">Software Developer</span>
-            </div>
-            <div>
-              <strong data-i18n="heroStatStackLabel">Core Stack</strong>
-              <span>C# .NET · SQL</span>
-            </div>
-            <div>
-              <strong data-i18n="heroStatMobileLabel">Mobile Apps</strong>
-              <span>React Native · Expo</span>
-            </div>
-          </div>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow" data-i18n="heroEyebrow">Software Developer · C# · *.NET *</p>
+        <h1 id="hero-title" data-i18n="heroTitle">C# .NET backend developer with enterprise software experience.</h1>
+        <p class="hero-text" data-i18n="heroText">
+          About 8 years of software development experience focused on C#, .NET, .NET Core, relational databases and business-critical backend systems.
+        </p>
+        <div class="button-row" aria-label="Profile links">
+          <a class="button primary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer" data-i18n="buttonLinkedin">LinkedIn</a>
+          <a class="button" href="https://github.com/tazegullu" target="_blank" rel="noreferrer" data-i18n="buttonGithub">GitHub</a>
+          <a class="button" href="mailto:atazegullu@gmail.com" data-i18n="buttonEmail">Email</a>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="phone-orbit orbit-one"></div>
-          <div class="phone-orbit orbit-two"></div>
-          <div class="phone-mockup main-phone">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="app-topbar">
-                <span></span>
-                <span></span>
-              </div>
-              <div class="app-hero-card">
-                <small data-i18n="mockupSmall">App Portfolio</small>
-                <strong data-i18n="mockupTitle">Apps by Arif</strong>
-                <p data-i18n="mockupText">Small, focused tools for real user problems.</p>
-              </div>
-              <div class="mini-grid">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div class="app-list-card">
-                <span></span>
-                <div>
-                  <strong></strong>
-                  <small></small>
-                </div>
-              </div>
-              <div class="app-list-card muted">
-                <span></span>
-                <div>
-                  <strong></strong>
-                  <small></small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section id="profile" aria-labelledby="profile-title">
+      <div class="section-head">
+        <h2 id="profile-title" data-i18n="profileTitle">Profile</h2>
+        <p data-i18n="profileText">
+          Professional background covering enterprise backend services, Microsoft Dynamics CRM solutions, data-driven systems and global-scale production services.
+        </p>
+      </div>
 
-      <section class="section-padding logo-strip reveal" aria-label="Core focus areas" data-i18n-attr="aria-label:focusAria">
-        <span data-i18n="focusSoftwareDeveloper">Software Developer</span>
-        <span>C# .NET</span>
-        <span>SQL</span>
-        <span>React Native</span>
-        <span>Expo</span>
-        <span>İstanbul</span>
-      </section>
+      <div class="card soft">
+        <ul class="meta-list">
+          <li>
+            <span data-i18n="profileExperienceLabel">Experience</span>
+            <strong data-i18n="profileExperienceValue">About 8 years in software development</strong>
+          </li>
+          <li>
+            <span data-i18n="profileFocusLabel">Main focus</span>
+            <strong data-i18n="profileFocusValue">C# .NET backend development</strong>
+          </li>
+          <li>
+            <span data-i18n="profileStackLabel">Core stack</span>
+            <strong data-i18n="profileStackValue">C#, .NET, .NET Core, MSSQL, PostgreSQL</strong>
+          </li>
+          <li>
+            <span data-i18n="profileLocationLabel">Location</span>
+            <strong data-i18n="profileLocationValue">Istanbul, Türkiye</strong>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="section-padding profile-section" id="profile">
-        <div class="section-heading compact reveal">
-          <p class="eyebrow"><span></span> <span data-i18n="profileEyebrow">LinkedIn profile</span></p>
-          <h2 data-i18n="profileTitle">Professional profile, updated from LinkedIn.</h2>
-          <p data-i18n="profileIntro">
-            A concise profile area for professional credibility: role, current company, education, location and public profile link.
-          </p>
-        </div>
+    <section id="expertise" aria-labelledby="expertise-title">
+      <div class="section-head">
+        <h2 id="expertise-title" data-i18n="expertiseTitle">Backend expertise</h2>
+        <p data-i18n="expertiseText">
+          .NET-based backend systems, relational databases, integrations and maintainable business application logic as the primary area of expertise.
+        </p>
+      </div>
 
-        <div class="profile-grid">
-          <article class="profile-card reveal">
-            <span class="profile-label" data-i18n="profileRoleLabel">Current role</span>
-            <h3 data-i18n="profileRoleTitle">Software Developer</h3>
-            <p data-i18n="profileRoleText">C# .NET focused developer with enterprise backend experience and a growing mobile app portfolio.</p>
-          </article>
+      <div class="card-grid">
+        <article class="card">
+          <h3 data-i18n="expertiseCardOneTitle">C# & .NET</h3>
+          <p data-i18n="expertiseCardOneText">Backend services, REST APIs, business rules, integrations and maintainable application structure.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="expertiseCardTwoTitle">Data & persistence</h3>
+          <p data-i18n="expertiseCardTwoText">MSSQL, PostgreSQL, Entity Framework Core, Redis and data-heavy workflows.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="expertiseCardThreeTitle">Enterprise systems</h3>
+          <p data-i18n="expertiseCardThreeText">Microsoft Dynamics CRM, corporate services, production maintenance and observability.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="expertiseCardFourTitle">Engineering approach</h3>
+          <p data-i18n="expertiseCardFourText">OOP, SOLID, Git, Agile delivery and clean, supportable software design.</p>
+        </article>
+      </div>
 
-          <article class="profile-card reveal">
-            <span class="profile-label" data-i18n="profileCompanyLabel">Company</span>
-            <h3>BilgeAdam Teknoloji</h3>
-            <p data-i18n="profileCompanyText">Professional software development experience in enterprise-scale systems.</p>
-          </article>
+      <div class="tags" style="margin-top: 18px" aria-label="Technology stack">
+        <span class="tag">C#</span>
+        <span class="tag">.NET</span>
+        <span class="tag">.NET Core</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">MSSQL</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Entity Framework Core</span>
+        <span class="tag">Redis</span>
+        <span class="tag">RabbitMQ</span>
+        <span class="tag">Dynamics CRM</span>
+      </div>
+    </section>
 
-          <article class="profile-card reveal">
-            <span class="profile-label" data-i18n="profileEducationLabel">Education</span>
-            <h3>İstanbul Teknik Üniversitesi</h3>
-            <p data-i18n="profileEducationText">Engineering background supporting backend, data and product-oriented software work.</p>
-          </article>
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <h2 id="experience-title" data-i18n="experienceTitle">Experience</h2>
+        <p data-i18n="experienceText">
+          A brief summary of selected companies, roles and systems.
+        </p>
+      </div>
 
-          <article class="profile-card reveal">
-            <span class="profile-label" data-i18n="profileLocationLabel">Location</span>
-            <h3>İstanbul, Türkiye</h3>
-            <p data-i18n="profileLocationText">Building professional backend systems and independent mobile products from Istanbul.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-padding" id="apps">
-        <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> <span data-i18n="appsEyebrow">Mobile app showcase</span></p>
-          <h2 data-i18n="appsTitle">Focused mobile apps with room for store and product links.</h2>
-          <p data-i18n="appsIntro">
-            Each app card is prepared for App Store, Google Play, GitHub, demo and privacy policy links, so the site can grow with every product release.
-          </p>
-        </div>
-
-        <div class="apps-grid">
-          <article class="app-card featured reveal">
-            <div class="app-card-top">
-              <div class="app-icon travel">TR</div>
-              <div>
-                <span class="status live" data-i18n="statusStorePrep">Store Prep</span>
-                <h3>TripReady</h3>
-              </div>
-            </div>
-            <p data-i18n="tripReadyText">
-              A lightweight travel packing and checklist app designed for practical trip preparation, offline-first usage and simple daily utility.
-            </p>
-            <div class="app-meta">
-              <span>React Native</span>
-              <span>Expo</span>
-              <span>iOS</span>
-            </div>
-            <div class="app-links">
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="appStoreSoon">App Store Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="googlePlaySoon">Google Play Soon</a>
-              <a class="link-pill" href="https://tazegullu.github.io/tripready/" target="_blank" rel="noreferrer" data-i18n="privacy">Privacy</a>
-            </div>
-          </article>
-
-          <article class="app-card reveal">
-            <div class="app-card-top">
-              <div class="app-icon exam">YK</div>
-              <div>
-                <span class="status review" data-i18n="statusInReview">In Review</span>
-                <h3>YKS Puan</h3>
-              </div>
-            </div>
-            <p data-i18n="yksText">
-              A clean TYT/AYT score calculator focused on fast input, estimated score ranges and a simple publishing-first mobile experience.
-            </p>
-            <div class="app-meta">
-              <span>Expo</span>
-              <span>TypeScript</span>
-              <span data-i18n="educationTag">Education</span>
-            </div>
-            <div class="app-links">
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="appStoreSoon">App Store Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="googlePlaySoon">Google Play Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="githubSoon">GitHub Soon</a>
-            </div>
-          </article>
-
-          <article class="app-card reveal">
-            <div class="app-card-top">
-              <div class="app-icon finance">FT</div>
-              <div>
-                <span class="status building" data-i18n="statusPrivateBuild">Private Build</span>
-                <h3>Finance Tracker</h3>
-              </div>
-            </div>
-            <p data-i18n="financeText">
-              A personal expense tracking app with installments, fixed expenses, credit card cycles, monthly views and multi-device sync experiments.
-            </p>
-            <div class="app-meta">
-              <span>Firebase</span>
-              <span>Zustand</span>
-              <span>SQLite</span>
-            </div>
-            <div class="app-links">
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="caseStudySoon">Case Study Soon</a>
-              <a class="link-pill disabled" href="#" aria-disabled="true" data-i18n="githubPrivate">GitHub Private</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-padding split-section" id="projects">
-        <div class="section-heading compact reveal">
-          <p class="eyebrow"><span></span> <span data-i18n="projectsEyebrow">Selected projects</span></p>
-          <h2 data-i18n="projectsTitle">Web projects, experiments and public repositories.</h2>
-          <p data-i18n="projectsIntro">
-            This area keeps selected public projects visible while the main site shifts toward a modern app portfolio.
-          </p>
-        </div>
-
-        <div class="project-list">
-          <a class="project-row reveal" href="https://tazegullu.github.io/questions_app/questions.html" target="_blank" rel="noreferrer">
-            <div>
-              <span data-i18n="legacyWebApp">Legacy Web App</span>
-              <strong>Questions App</strong>
-              <p data-i18n="questionsText">A small browser-based question practice tool from the earlier version of this website.</p>
-            </div>
-            <em data-i18n="open">Open</em>
-          </a>
-
-          <a class="project-row reveal" href="https://github.com/tazegullu" target="_blank" rel="noreferrer">
-            <div>
-              <span data-i18n="repository">Repository</span>
-              <strong>GitHub Profile</strong>
-              <p data-i18n="githubProfileText">Source code, experiments and future public repositories can be linked here.</p>
-            </div>
-            <em data-i18n="visit">Visit</em>
-          </a>
-        </div>
-      </section>
-
-      <section class="section-padding" id="stack">
-        <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> <span data-i18n="stackEyebrow">Technical stack</span></p>
-          <h2 data-i18n="stackTitle">C# .NET depth, mobile product direction.</h2>
-          <p data-i18n="stackIntro">
-            The site presents a balanced profile: C# .NET backend experience, SQL-oriented engineering, and a growing portfolio of practical mobile applications.
-          </p>
-        </div>
-
-        <div class="stack-grid">
-          <article class="stack-card reveal">
-            <span class="stack-number">01</span>
-            <h3 data-i18n="backendTitle">Backend Engineering</h3>
-            <p data-i18n="backendText">C# .NET, SQL, API design, enterprise systems and production-oriented software development.</p>
-          </article>
-          <article class="stack-card reveal">
-            <span class="stack-number">02</span>
-            <h3 data-i18n="mobileTitle">Mobile Development</h3>
-            <p data-i18n="mobileText">React Native, Expo, TypeScript, responsive UI, local-first flows and store-ready app structures.</p>
-          </article>
-          <article class="stack-card reveal">
-            <span class="stack-number">03</span>
-            <h3 data-i18n="dataTitle">Data, Cloud & Sync</h3>
-            <p data-i18n="dataText">Firebase, Firestore, SQLite, data synchronization patterns and scalable app foundations.</p>
-          </article>
-          <article class="stack-card reveal">
-            <span class="stack-number">04</span>
-            <h3 data-i18n="productTitle">Product Thinking</h3>
-            <p data-i18n="productText">Small focused products, practical use cases, launch discipline and iterative improvement after release.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-padding about-section" id="about">
-        <div class="about-card reveal">
+      <div class="experience-list">
+        <article class="experience-item">
           <div>
-            <p class="eyebrow"><span></span> <span data-i18n="aboutEyebrow">About</span></p>
-            <h2 data-i18n="aboutTitle">Developer profile</h2>
+            <h3 data-i18n="expBilgeAdamTitle">BilgeAdam Teknoloji / Ziraat Teknoloji</h3>
+            <p data-i18n="expBilgeAdamText">Software development for corporate banking and financial technology systems.</p>
           </div>
-          <p data-i18n="aboutTextOne">
-            I am a Software Developer with a strong foundation in C# .NET and SQL. My professional background is rooted in enterprise backend engineering, while my independent work focuses on React Native and Expo mobile apps that solve practical everyday problems.
-          </p>
-          <p data-i18n="aboutTextTwo">
-            This website is designed as a central portfolio for my LinkedIn profile, mobile apps, technical projects, privacy policy pages and future public releases.
-          </p>
+          <span class="experience-meta" data-i18n="expCurrent">Current</span>
+        </article>
+
+        <article class="experience-item">
+          <div>
+            <h3 data-i18n="expDeliveryTitle">Delivery Hero Tech Hub</h3>
+            <p data-i18n="expDeliveryText">Backend development for global pricing and discount services used across multiple countries.</p>
+          </div>
+          <span class="experience-meta">2022 — 2023</span>
+        </article>
+
+        <article class="experience-item">
+          <div>
+            <h3 data-i18n="expYemeksepetiTitle">Yemeksepeti</h3>
+            <p data-i18n="expYemeksepetiText">Core data, services and Microsoft Dynamics CRM development.</p>
+          </div>
+          <span class="experience-meta">2020 — 2022</span>
+        </article>
+
+        <article class="experience-item">
+          <div>
+            <h3 data-i18n="expVeriparkTitle">VeriPark</h3>
+            <p data-i18n="expVeriparkText">Microsoft Dynamics CRM development for medium and large-scale projects.</p>
+          </div>
+          <span class="experience-meta">2017 — 2020</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="mobile" aria-labelledby="mobile-title">
+      <div class="section-head">
+        <h2 id="mobile-title" data-i18n="mobileTitle">Hobby mobile projects</h2>
+        <p data-i18n="mobileText">
+          Mobile development as a learning and experimentation area, with small projects focused on product development, App Store publishing and React Native / Expo workflows.
+        </p>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card">
+          <div>
+            <h3 data-i18n="yksTitle">YKS Puan ve Tercih Asistanı</h3>
+            <p data-i18n="yksText">A Turkish exam score and preference assistant app for TYT / AYT candidates.</p>
+            <span class="status" data-i18n="statusLiveIos">Live on iOS</span>
+          </div>
+          <div class="project-links">
+            <a class="button" href="https://apps.apple.com/tr/app/yks-puan-ve-tercih-asistan%C4%B1/id6781019793?l=tr" target="_blank" rel="noreferrer" data-i18n="buttonAppStore">App Store</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3 data-i18n="tripTitle">TripReady Checklist</h3>
+            <p data-i18n="tripText">A simple travel checklist app for preparing trips and packing lists.</p>
+            <span class="status" data-i18n="statusLiveIos">Live on iOS</span>
+          </div>
+          <div class="project-links">
+            <a class="button" href="https://apps.apple.com/tr/app/tripready-checklist/id6781859328?l=tr" target="_blank" rel="noreferrer" data-i18n="buttonAppStore">App Store</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="contact-box">
+        <div>
+          <h2 id="contact-title" data-i18n="contactTitle">Contact</h2>
+          <p data-i18n="contactText">Contact links: LinkedIn, GitHub and email.</p>
         </div>
-
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <span></span>
-            <div>
-              <strong data-i18n="timelineSoftwareTitle">Software Developer</strong>
-              <p data-i18n="timelineSoftwareText">C# .NET and SQL development for enterprise-scale systems.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span></span>
-            <div>
-              <strong data-i18n="timelineMobileTitle">Cross-platform mobile apps</strong>
-              <p data-i18n="timelineMobileText">React Native and Expo apps prepared for iOS, Android, web and store publishing workflows.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span></span>
-            <div>
-              <strong data-i18n="timelineProductTitle">Independent product portfolio</strong>
-              <p data-i18n="timelineProductText">Focused mobile products, store publishing and practical app experiments.</p>
-            </div>
-          </div>
+        <div class="button-row">
+          <a class="button primary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer" data-i18n="buttonLinkedin">LinkedIn</a>
+          <a class="button" href="https://github.com/tazegullu" target="_blank" rel="noreferrer" data-i18n="buttonGithub">GitHub</a>
+          <a class="button" href="mailto:atazegullu@gmail.com" data-i18n="buttonEmail">Email</a>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="section-padding contact-section" id="contact">
-        <div class="contact-card reveal">
-          <p class="eyebrow"><span></span> <span data-i18n="contactEyebrow">Contact</span></p>
-          <h2 data-i18n="contactTitle">Let’s connect.</h2>
-          <p data-i18n="contactIntro">
-            For professional contact, app feedback, collaboration or technical discussions, use the links below.
-          </p>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Arif Tazegüllü · <a class="text-link" href="https://tazegullu.com">tazegullu.com</a></span>
+  </footer>
 
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/tazegullu/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn btn-secondary" href="https://github.com/tazegullu" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn btn-secondary" href="mailto:ariftazegullu.developer@gmail.com" data-i18n="sendEmail">Send Email</a>
-            <button class="btn btn-ghost" type="button" data-copy-email data-i18n="copyEmail">Copy Email</button>
-          </div>
+  <script>
+    const translations = {
+      en: {
+        documentTitle: "Arif Tazegüllü | C# .NET Backend Developer",
+        documentDescription: "Personal website of Arif Tazegüllü. C# .NET backend development, enterprise software experience and hobby mobile projects.",
+        brandRole: "C# .NET Backend Developer",
+        navContact: "Contact",
+        heroEyebrow: "Software Developer · C# · *.NET *",
+        heroTitle: "C# .NET backend developer with enterprise software experience.",
+        heroText: "About 8 years of software development experience focused on C#, .NET, .NET Core, relational databases and business-critical backend systems.",
+        buttonLinkedin: "LinkedIn",
+        buttonGithub: "GitHub",
+        buttonEmail: "Email",
+        buttonAppStore: "App Store",
+        profileTitle: "Profile",
+        profileText: "Professional background covering enterprise backend services, Microsoft Dynamics CRM solutions, data-driven systems and global-scale production services.",
+        profileExperienceLabel: "Experience",
+        profileExperienceValue: "About 8 years in software development",
+        profileFocusLabel: "Main focus",
+        profileFocusValue: "C# .NET backend development",
+        profileStackLabel: "Core stack",
+        profileStackValue: "C#, .NET, .NET Core, MSSQL, PostgreSQL",
+        profileLocationLabel: "Location",
+        profileLocationValue: "Istanbul, Türkiye",
+        expertiseTitle: "Backend expertise",
+        expertiseText: ".NET-based backend systems, relational databases, integrations and maintainable business application logic as the primary area of expertise.",
+        expertiseCardOneTitle: "C# & .NET",
+        expertiseCardOneText: "Backend services, REST APIs, business rules, integrations and maintainable application structure.",
+        expertiseCardTwoTitle: "Data & persistence",
+        expertiseCardTwoText: "MSSQL, PostgreSQL, Entity Framework Core, Redis and data-heavy workflows.",
+        expertiseCardThreeTitle: "Enterprise systems",
+        expertiseCardThreeText: "Microsoft Dynamics CRM, corporate services, production maintenance and observability.",
+        expertiseCardFourTitle: "Engineering approach",
+        expertiseCardFourText: "OOP, SOLID, Git, Agile delivery and clean, supportable software design.",
+        experienceTitle: "Experience",
+        experienceText: "A brief summary of selected companies, roles and systems.",
+        expBilgeAdamTitle: "BilgeAdam Teknoloji / Ziraat Teknoloji",
+        expBilgeAdamText: "Software development for corporate banking and financial technology systems.",
+        expCurrent: "Current",
+        expDeliveryTitle: "Delivery Hero Tech Hub",
+        expDeliveryText: "Backend development for global pricing and discount services used across multiple countries.",
+        expYemeksepetiTitle: "Yemeksepeti",
+        expYemeksepetiText: "Core data, services and Microsoft Dynamics CRM development.",
+        expVeriparkTitle: "VeriPark",
+        expVeriparkText: "Microsoft Dynamics CRM development for medium and large-scale projects.",
+        mobileTitle: "Hobby mobile projects",
+        mobileText: "Mobile development as a learning and experimentation area, with small projects focused on product development, App Store publishing and React Native / Expo workflows.",
+        yksTitle: "YKS Puan ve Tercih Asistanı",
+        yksText: "A Turkish exam score and preference assistant app for TYT / AYT candidates.",
+        tripTitle: "TripReady Checklist",
+        tripText: "A simple travel checklist app for preparing trips and packing lists.",
+        statusLiveIos: "Live on iOS",
+        contactTitle: "Contact",
+        contactText: "Contact links: LinkedIn, GitHub and email."
+      },
+      tr: {
+        documentTitle: "Arif Tazegüllü | C# .NET Backend Developer",
+        documentDescription: "Arif Tazegüllü kişisel web sitesi. C# .NET backend geliştirme, kurumsal yazılım deneyimi ve hobi mobil uygulama projeleri.",
+        brandRole: "C# .NET Backend Developer",
+        navContact: "İletişim",
+        heroEyebrow: "Software Developer · C# · *.NET *",
+        heroTitle: "Kurumsal yazılım deneyimine sahip C# .NET backend developer.",
+        heroText: "Yaklaşık 8 yıllık C#, .NET, .NET Core, ilişkisel veritabanları ve iş kritik backend sistemleri ana odaklı yazılım geliştirme deneyimi.",
+        buttonLinkedin: "LinkedIn",
+        buttonGithub: "GitHub",
+        buttonEmail: "E-posta",
+        buttonAppStore: "App Store",
+        profileTitle: "Profil",
+        profileText: "Kurumsal backend servisleri, Microsoft Dynamics CRM çözümleri, veri odaklı sistemler ve global ölçekte çalışan üretim servislerini kapsayan profesyonel deneyim.",
+        profileExperienceLabel: "Deneyim",
+        profileExperienceValue: "Yaklaşık 8 yıl yazılım geliştirme",
+        profileFocusLabel: "Ana odak",
+        profileFocusValue: "C# .NET backend geliştirme",
+        profileStackLabel: "Ana teknoloji seti",
+        profileStackValue: "C#, .NET, .NET Core, MSSQL, PostgreSQL",
+        profileLocationLabel: "Konum",
+        profileLocationValue: "İstanbul, Türkiye",
+        expertiseTitle: "Backend uzmanlığı",
+        expertiseText: ".NET tabanlı backend sistemleri, ilişkisel veritabanları, entegrasyonlar ve sürdürülebilir iş uygulaması mantığı ana uzmanlık alanı.",
+        expertiseCardOneTitle: "C# & .NET",
+        expertiseCardOneText: "Backend servisleri, REST API'ler, iş kuralları, entegrasyonlar ve sürdürülebilir uygulama yapısı.",
+        expertiseCardTwoTitle: "Veri & kalıcılık",
+        expertiseCardTwoText: "MSSQL, PostgreSQL, Entity Framework Core, Redis ve veri yoğun iş akışları.",
+        expertiseCardThreeTitle: "Kurumsal sistemler",
+        expertiseCardThreeText: "Microsoft Dynamics CRM, kurumsal servisler, üretim ortamı bakımı ve gözlemlenebilirlik.",
+        expertiseCardFourTitle: "Mühendislik yaklaşımı",
+        expertiseCardFourText: "OOP, SOLID, Git, Agile çalışma ve temiz, desteklenebilir yazılım tasarımı.",
+        experienceTitle: "Deneyim",
+        experienceText: "Çalışılan şirketler, roller ve sistemler için kısa özet.",
+        expBilgeAdamTitle: "BilgeAdam Teknoloji / Ziraat Teknoloji",
+        expBilgeAdamText: "Kurumsal bankacılık ve finans teknolojileri sistemleri için yazılım geliştirme.",
+        expCurrent: "Güncel",
+        expDeliveryTitle: "Delivery Hero Tech Hub",
+        expDeliveryText: "Birden fazla ülkede kullanılan global fiyatlandırma ve indirim servisleri için backend geliştirme.",
+        expYemeksepetiTitle: "Yemeksepeti",
+        expYemeksepetiText: "Core data, servisler ve Microsoft Dynamics CRM geliştirme.",
+        expVeriparkTitle: "VeriPark",
+        expVeriparkText: "Orta ve büyük ölçekli projeler için Microsoft Dynamics CRM geliştirme.",
+        mobileTitle: "Hobi mobil projeler",
+        mobileText: "Mobil geliştirme; öğrenme ve deneme alanı olarak yürütülen, ürün geliştirme, App Store yayınlama ve React Native / Expo süreçlerine odaklanan hobi projelerinden oluşur.",
+        yksTitle: "YKS Puan ve Tercih Asistanı",
+        yksText: "TYT / AYT adayları için hazırlanmış puan ve tercih asistanı uygulaması.",
+        tripTitle: "TripReady Checklist",
+        tripText: "Seyahat hazırlığı ve valiz listeleri için sade bir checklist uygulaması.",
+        statusLiveIos: "iOS'ta yayında",
+        contactTitle: "İletişim",
+        contactText: "LinkedIn, GitHub ve e-posta iletişim linkleri."
+      }
+    };
 
-          <p class="copy-status" data-copy-status aria-live="polite"></p>
-        </div>
-      </section>
-    </main>
+    const languageButtons = document.querySelectorAll("[data-lang]");
+    const translatableNodes = document.querySelectorAll("[data-i18n]");
+    const savedLanguage = localStorage.getItem("preferred-language");
+    const initialLanguage = savedLanguage || "en";
 
-    <footer class="site-footer">
-      <p><span data-i18n="copyrightPrefix">©</span> <span data-year></span> Arif Tazegüllü. <span data-i18n="footerBuilt">Built for GitHub Pages.</span></p>
-      <a href="#top" data-i18n="backToTop">Back to top</a>
-    </footer>
-  </div>
+    function setLanguage(language) {
+      const dictionary = translations[language] || translations.en;
 
-  <script src="script.js"></script>
+      document.documentElement.lang = language;
+      document.title = dictionary.documentTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      if (description) {
+        description.setAttribute("content", dictionary.documentDescription);
+      }
+
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute("content", dictionary.documentDescription);
+      }
+
+      translatableNodes.forEach((node) => {
+        const key = node.getAttribute("data-i18n");
+        if (dictionary[key]) {
+          node.textContent = dictionary[key];
+        }
+      });
+
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.getAttribute("data-lang") === language);
+      });
+
+      localStorage.setItem("preferred-language", language);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.getAttribute("data-lang")));
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    setLanguage(initialLanguage);
+  </script>
 </body>
 </html>
